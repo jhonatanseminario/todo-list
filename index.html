@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e1e0ff">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lista de Tareas</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Mis Tareas Pendientes</h1>
+    <h2 class="subtitle"></h2>
+    <input type="text" placeholder="¿Qué planes tienes?">
+    <button id="botonAgregar">AÑADIR</button>
+    <button id="botonLimpiar" title="Eliminar todas las tareas"><span class="material-symbols-outlined">
+      close
+    </span></button>
+    <button id="botonEliminar" title="Eliminar todas las tareas como completadas"><span class="material-symbols-outlined">
+      delete
+    </span></button>
+    <button id="botonCompletar" title="Marcar todas las tareas como completadas"><span class="material-symbols-outlined">
+      check_circle
+    </span></button>
+    <ol></ol>
+    <div class="lista-vacia">
+      <img class="icono" src="image.webp" alt="Portapapeles con una hoja en blanco">
+      <p class="consejo"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

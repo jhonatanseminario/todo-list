@@ -1,0 +1,485 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #a569bd, #ffb6c1);
+}
+
+input[type="text"] {
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    width: 250px;
+    height: 25px;
+    padding: 10px 130px 10px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333333;
+    background-color: #eeeeee;
+    transition: transform 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #888888;
+    user-select: none;
+}
+
+input[type="text"]:hover {
+    outline: none;
+    background-color: #e6e6e6;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    transform: scale(1.1);
+}
+
+input[type="text"]:focus + #botonAgregar {
+    transform: scale(1.1) translateX(13px);
+}
+
+ol {
+    position: absolute;
+    top: 190px;
+    left: 30px;
+    padding: 0px;
+    max-height: 359px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+ol li {
+    position: relative;
+    margin: 10px;
+    padding: 15px 145px 15px 20px;
+    width: 255px;
+    height: 30px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    list-style: none;
+    border-radius: 8px;
+    color: #223d5b;
+    background-color: #ebeaff;
+    transition: background-color 0.3s ease;
+}
+
+ol li:hover {
+    background-color: #e1e0ff;
+}
+
+li[contentEditable="true"],
+li[contentEditable="true"]:hover {
+    background-color: rgb(245, 250, 255);
+    outline: 3px solid #50bfff;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px 0px rgb(0, 0, 0, 0.4);
+    color: darkcyan;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: aparecer 0.5s ease-out forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    right: 110px;
+    color:rgb(60, 60, 112);
+    user-select: none;
+    font-family: Roboto, Lato, sans-serif;
+    font-size: 28px;
+}
+
+.subtitle {
+    position: absolute;
+    top: 160px;
+    left: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #5a5a5a;
+    user-select: none;
+    display: none;
+}
+
+.input-fade {
+    color: #333;
+    animation: desvanecer 0.3s ease;
+}
+
+@keyframes desvanecer {
+    0% {
+      color: #333;
+    }
+    100% {
+      color: transparent;
+    }
+}
+
+.creacion {
+    animation: creacion 0.3s ease-out;
+}
+
+.eliminacion {
+    animation: eliminacion 0.3s ease-out;
+}
+
+.completado {
+    animation: completado 0.3s ease-out, creacion 0s ease-out;
+}
+
+@keyframes creacion {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes eliminacion {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+}
+
+@keyframes completado {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tachado {
+    text-decoration: line-through wavy 3px mediumblue;
+    background-color: #a5ffbd;
+}
+
+.tachado:hover {
+    background-color: #90ffab;
+}
+
+.tachado .marcar {
+    background-color: #0056b3;
+}
+
+.tachado .marcar:hover {
+    background-color: #006bdd;
+}
+
+.marcar,
+.editar,
+.eliminar,
+#botonLimpiar,
+#botonCompletar,
+#botonEliminar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    animation: creacionBotones 0.5s ease-out;
+}
+
+#botonLimpiar,
+#botonCompletar,
+#botonEliminar {
+    animation: creacionBotones 0s;
+}
+
+@keyframes creacionBotones {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    60% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.marcar {
+    left: 300px;
+    background-color: #007bff;
+}
+
+.editar {
+    left: 340px;
+    background-color: #ffc107;
+}
+
+.eliminar {
+    left: 380px;
+    background-color: #dc3545;
+}
+
+.lista-vacia {
+    position: absolute;
+    top: 208px;
+}
+
+.icono {
+    position: absolute;
+    left: 155px;
+    width: 200px;
+}
+
+.consejo {
+    position: absolute;
+    top: 208px;
+    left: 50px;
+    width: 400px;
+    font-weight: 1000;
+    line-height: 28px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #006bdd;
+    opacity: 0.9;
+    user-select: none;
+    text-align: center;
+}
+
+.sin-contenido::before {
+    content: 'Escribe una tarea...';
+    color: #888;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.sin-contenido {
+    color: #888;
+}
+
+.marcar:hover {
+    background-color: #4da8f5;
+}
+
+.editar:hover {
+    background-color: #ffd42a;
+}
+
+.eliminar:hover {
+    background-color: #e06067;
+}
+
+.marcar:active {
+    background-color: #007bff;
+    transform: scale(1.1);
+}
+
+.editar:active:not([disabled]) {
+    background-color: #ffc107;
+    transform: scale(1.1);
+}
+
+.eliminar:active {
+    background-color: #dc3545;
+    transform: scale(1.1);
+}
+
+.editar:disabled {
+    background-color: #ffe065;
+    cursor: default;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    top: 4px;
+    left: 3px;
+}
+
+.eliminar .material-symbols-outlined {
+    position: absolute;
+    top: -4px;
+    left: 3px;
+}
+
+#botonLimpiar {
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: 410px;
+    width: 40px;
+    height: 40px;
+    background-color: #dc3545;
+}
+
+#botonLimpiar .material-symbols-outlined {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 32px;
+}
+
+#botonLimpiar:hover {
+    background-color: rgb(220, 53, 69, .8);
+}
+
+#botonLimpiar:active {
+    transform: scale(1.1);
+    background-color: #dc3545;
+}
+
+#botonEliminar {
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: 365px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffc107;
+}
+
+#botonEliminar .material-symbols-outlined {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 32px;
+}
+
+#botonEliminar:hover {
+    background-color: #ffd42a
+}
+
+#botonEliminar:active {
+    transform: scale(1.1);
+    background-color: #ffc107
+}
+
+#botonEliminar:active:not([disabled]) {
+    background-color: #ffc107;
+    transform: scale(1.1);
+}
+
+#botonEliminar:disabled {
+    background-color: #ffe065;
+    cursor: default;
+}
+
+#botonEliminar:disabled:active {
+    background-color: #ffe065;
+    transform: scale(1);
+}
+
+#botonCompletar {
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: 320px;
+    width: 40px;
+    height: 40px;
+    background-color: #28a745;
+}
+
+#botonCompletar .material-symbols-outlined {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 32px;
+}
+
+#botonCompletar:hover {
+    background-color: rgb(40, 167, 69, .8);
+}
+
+#botonCompletar:active {
+    transform: scale(1.1);
+    background-color: #28a745
+}
+
+#botonAgregar {
+    position: absolute;
+    top: 100px;
+    left: 335px;
+    width: 120px;
+    height: 45px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    user-select: none;
+    background-color: #28a745;
+    transition: transform 0.3s ease;
+}
+
+#botonAgregar:hover {
+    background-color: #218838;
+}
+
+::selection {
+    background-color: #90d6ff;
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        display: block;
+        background: white;
+    }
+
+    ol {
+        max-height: none;
+    }
+
+    .container {
+        position: absolute;
+        top: 32px;
+        border-radius: 0px;
+        box-shadow: 0px 0px;
+    }
+
+    .icono {
+        top: 16px;
+    }
+    
+    .consejo {
+        top: 240px;
+    }
+}
