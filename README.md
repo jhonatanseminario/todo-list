@@ -1,8 +1,6 @@
-<div align="center">
-  <h1>Lista de Tareas<h1>
-</div>
+<h1 align="center">Lista de Tareas</h1>
 
-## 🌟 Características Destacadas
+## Características
 
 - **Añadir tarea:** Agrega nuevas tareas a tu lista ingresando el texto en el campo de entrada y haciendo clic en el botón "AÑADIR".
 - **Marcar y Desmarcar Tareas:** Puedes marcar o desmarcar las tareas como completadas haciendo clic en el botón correspondiente junto a cada tarea.
@@ -11,12 +9,6 @@
 - **Limpiar Tareas Completadas:** Elimina todas las tareas completadas de tu lista haciendo clic en el botón "Eliminar todas las tareas como completadas".
 - **Marcar Todas las Tareas:** Marca todas las tareas como completadas haciendo clic en el botón "Marcar todas las tareas como completadas".
 
-## 🚀 Tecnologías Utilizadas
-
-- `HTML` `CSS` `JavaScript`
-- `Google Fonts`
-- `Material Icons`
-
-## 🤝 Cómo Contribuir
+## Contribuir
 
 El proyecto aún se encuentra en desarrollo y siempre estoy dispuesto a aceptar propuestas de mejoras y nuevas funcionalidades. Si estás interesado en contribuir, realiza un fork de mi repositorio y solicita un pull request detallando los cambios que hayas realizado.
