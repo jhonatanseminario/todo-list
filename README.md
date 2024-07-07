@@ -1,5 +1,5 @@
 # Lista de Tareas
-Organiza tu vida y maximiza tu productividad con este administrador de tareas diarias.
+Organiza tu vida y maximiza tu productividad con este gestor de tareas diarias.
 
 ## Características
 - **Añadir Tarea:** Agrega nuevas tareas a tu lista ingresando el texto en el campo de entrada y haciendo clic en el botón "AÑADIR" o presionando la tecla "Enter".
