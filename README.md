@@ -12,4 +12,4 @@ Organiza tu vida y maximiza tu productividad con este gestor de tareas diarias.
 - **Eliminar Todas las Tareas:** Elimina todas las tareas de la lista haciendo clic en el botón "Eliminar todas las tareas".
 
 ## Contribuir
-El proyecto aún se encuentra en desarrollo y siempre estoy dispuesto a aceptar propuestas de mejoras y nuevas funcionalidades. Si estás interesado en contribuir, realiza un fork de mi repositorio y solicita un pull request detallando los cambios que hayas realizado.
+¿Te gustaría colaborar y ayudar a hacer crecer este proyecto? ¡Tu aporte es muy valioso! Simplemente realiza un fork del repositorio, introduce tus mejoras y sugiere los cambios a través de un pull request detallado. ¡Estoy emocionado por recibir tus contribuciones y hacer crecer este proyecto juntos!
