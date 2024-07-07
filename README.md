@@ -1,6 +1,6 @@
-# To-Do List 📝
-
-Aplicación para gestionar y organizar tus tareas diarias de manera eficiente.
+<div align="center">
+  <h1>Lista de Tareas<h1>
+</div>
 
 ## 🌟 Características Destacadas
 
