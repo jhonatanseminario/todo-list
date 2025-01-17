@@ -61,7 +61,9 @@ ol {
     max-height: 359px;
     overflow-y: auto;
     overflow-x: hidden;
-
+    scrollbar-color: #ebeaff transparent;
+    scrollbar-width: thin;
+    
     li {
         position: relative;
         margin: 10px;
